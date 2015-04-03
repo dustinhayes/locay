@@ -1,0 +1,41 @@
+{
+  "name": "locay",
+  "version": "1.0.0",
+  "description": "A window.location simulator for the browser and beyond",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jshint . && babel-node test/locay.js",
+    "build": "browserify src/index.js -s locay | uglifyjs > dist/locay.js"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dustinhayes/locay.git"
+  },
+  "keywords": [
+    "browser",
+    "window.location"
+  ],
+  "author": "Dustin Hayes <dustinmichaelh@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dustinhayes/locay/issues"
+  },
+  "homepage": "https://github.com/dustinhayes/locay",
+  "devDependencies": {
+    "babel": "^5.0.2",
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.4",
+    "jshint": "^2.6.3",
+    "tape": "^3.5.0",
+    "uglify-js": "^2.4.19"
+  },
+  "dependencies": {
+    "object-assign": "^2.0.0",
+    "url": "^0.10.3"
+  }
+}
